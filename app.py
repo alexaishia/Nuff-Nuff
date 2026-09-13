@@ -209,6 +209,676 @@ def build_alexa_conversation(reply_html=""):
     </div>
     """
 
+def handle_patel_choice(choice, points):
+
+    samir_style = """
+        background:#b56fa0;
+        color:white;
+        padding:10px 14px;
+        border-radius:18px 18px 5px 18px;
+        width:fit-content;
+        max-width:75%;
+        margin-left:auto;
+        margin-bottom:12px;
+    """
+
+    alexa_style = """
+        background:#eeeeee;
+        color:#111111;
+        padding:10px 14px;
+        border-radius:18px 18px 18px 5px;
+        width:fit-content;
+        max-width:75%;
+        margin-bottom:12px;
+    """
+
+    point_style = """
+        text-align:center;
+        margin-top:18px;
+        color:#ffbfdc;
+        font-weight:bold;
+    """
+
+    if choice == "yes i'll get you one too":
+        points += 5
+
+        reply = f"""
+        <div style="{samir_style}">
+            yes i'll get you one too
+        </div>
+
+        <div style="{alexa_style}">
+            AWWWWWW 🥺
+        </div>
+
+        <div style="{alexa_style}">
+            see this is why i love u
+        </div>
+
+        <div style="{point_style}">
+            ♡ +5 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "yes but it's mine":
+        points -= 3
+
+        reply = f"""
+        <div style="{samir_style}">
+            yes but it's mine
+        </div>
+
+        <div style="{alexa_style}">
+            oh!
+        </div>
+
+        <div style="{alexa_style}">
+            sleep with one eye open
+        </div>
+
+        <div style="{point_style}">
+            ♡ -3 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "no":
+        reply = f"""
+        <div style="{samir_style}">
+            no
+        </div>
+
+        <div style="{alexa_style}">
+            then what is even the point of going AGAIN 😭
+        </div>
+
+        <div style="{alexa_style}">
+            ur mom sent u on a side quest for nothing
+        </div>
+        """
+
+    elif choice == "my mom is making me go 😭":
+        points += 2
+
+        reply = f"""
+        <div style="{samir_style}">
+            my mom is making me go 😭
+        </div>
+
+        <div style="{alexa_style}">
+            LMFAOOOO I KNEW IT
+        </div>
+
+        <div style="{alexa_style}">
+            professional Patel Brothers employee atp
+        </div>
+
+        <div style="{point_style}">
+            ♡ +2 Boyfriend Points
+        </div>
+        """
+
+    return reply, points
+
+def handle_climbing_choice(choice, points):
+
+    samir_style = """
+        background:#b56fa0;
+        color:white;
+        padding:10px 14px;
+        border-radius:18px 18px 5px 18px;
+        width:fit-content;
+        max-width:75%;
+        margin-left:auto;
+        margin-bottom:12px;
+    """
+
+    alexa_style = """
+        background:#eeeeee;
+        color:#111111;
+        padding:10px 14px;
+        border-radius:18px 18px 18px 5px;
+        width:fit-content;
+        max-width:75%;
+        margin-bottom:12px;
+    """
+
+    point_style = """
+        text-align:center;
+        margin-top:18px;
+        color:#ffbfdc;
+        font-weight:bold;
+    """
+
+    if choice == "pull with your heel and keep your hips close to the wall":
+        points += 5
+
+        reply = f"""
+        <div style="{samir_style}">
+            pull with your heel and keep your hips close to the wall
+        </div>
+
+        <div style="{alexa_style}">
+            OHHHH
+        </div>
+
+        <div style="{alexa_style}">
+            wait i think ive been letting my hips come off the wall 😭
+        </div>
+
+        <div style="{alexa_style}">
+            okay climbing coach
+        </div>
+
+        <div style="{point_style}">
+            ♡ +5 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "push through your other foot while pulling with the heel":
+        points += 5
+
+        reply = f"""
+        <div style="{samir_style}">
+            push through your other foot while pulling with the heel
+        </div>
+
+        <div style="{alexa_style}">
+            WAIT
+        </div>
+
+        <div style="{alexa_style}">
+            so like push with one leg and pull with the other??
+        </div>
+
+        <div style="{alexa_style}">
+            okay wait im trying that next time
+        </div>
+
+        <div style="{point_style}">
+            ♡ +5 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "just let go of the heel hook":
+        points -= 2
+
+        reply = f"""
+        <div style="{samir_style}">
+            just let go of the heel hook
+        </div>
+
+        <div style="{alexa_style}">
+            THEN WHY AM I HEEL HOOKING 😭
+        </div>
+
+        <div style="{alexa_style}">
+            useless ass climbing coach
+        </div>
+
+        <div style="{point_style}">
+            ♡ -2 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "skill issue":
+        points -= 3
+
+        reply = f"""
+        <div style="{samir_style}">
+            skill issue
+        </div>
+
+        <div style="{alexa_style}">
+            fuck u 😭
+        </div>
+
+        <div style="{alexa_style}">
+            im gonna flash ur project out of spite
+        </div>
+
+        <div style="{point_style}">
+            ♡ -3 Boyfriend Points
+        </div>
+        """
+
+    return reply, points
+
+def handle_delivery_choice(choice, points):
+
+    samir_style = """
+        background:#b56fa0;
+        color:white;
+        padding:10px 14px;
+        border-radius:18px 18px 5px 18px;
+        width:fit-content;
+        max-width:75%;
+        margin-left:auto;
+        margin-bottom:12px;
+    """
+
+    alexa_style = """
+        background:#eeeeee;
+        color:#111111;
+        padding:10px 14px;
+        border-radius:18px 18px 18px 5px;
+        width:fit-content;
+        max-width:75%;
+        margin-bottom:12px;
+    """
+
+    point_style = """
+        text-align:center;
+        margin-top:18px;
+        color:#ffbfdc;
+        font-weight:bold;
+    """
+
+    if choice == "ofc baby":
+        points += 5
+
+        reply = f"""
+        <div style="{samir_style}">
+            ofc baby
+        </div>
+
+        <div style="{alexa_style}">
+            good 🥺
+        </div>
+
+        <div style="{alexa_style}">
+            i love u drive safe
+        </div>
+
+        <div style="{point_style}">
+            ♡ +5 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "yes ma'am 🫡":
+        points += 3
+
+        reply = f"""
+        <div style="{samir_style}">
+            yes ma'am 🫡
+        </div>
+
+        <div style="{alexa_style}">
+            LMFAOOO
+        </div>
+
+        <div style="{alexa_style}">
+            good answer jittleyang
+        </div>
+
+        <div style="{point_style}">
+            ♡ +3 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "i'll try to remember":
+        points -= 3
+
+        reply = f"""
+        <div style="{samir_style}">
+            i'll try to remember
+        </div>
+
+        <div style="{alexa_style}">
+            TRY???
+        </div>
+
+        <div style="{alexa_style}">
+            oh okay!
+        </div>
+
+        <div style="{point_style}">
+            ♡ -3 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "no":
+        points -= 10
+
+        reply = f"""
+        <div style="{samir_style}">
+            no
+        </div>
+
+        <div style="{alexa_style}">
+            oh!
+        </div>
+
+        <div style="{alexa_style}">
+            interesting!
+        </div>
+
+        <div style="{point_style}">
+            ♡ -10 Boyfriend Points
+        </div>
+        """
+
+    return reply, points
+
+def handle_missing_you_choice(choice, points):
+
+    samir_style = """
+        background:#b56fa0;
+        color:white;
+        padding:10px 14px;
+        border-radius:18px 18px 5px 18px;
+        width:fit-content;
+        max-width:75%;
+        margin-left:auto;
+        margin-bottom:12px;
+    """
+
+    alexa_style = """
+        background:#eeeeee;
+        color:#111111;
+        padding:10px 14px;
+        border-radius:18px 18px 18px 5px;
+        width:fit-content;
+        max-width:75%;
+        margin-bottom:12px;
+    """
+
+    point_style = """
+        text-align:center;
+        margin-top:18px;
+        color:#ffbfdc;
+        font-weight:bold;
+    """
+
+    if choice == "why are you annoyed at ME 😭":
+        points += 2
+
+        reply = f"""
+        <div style="{samir_style}">
+            why are you annoyed at ME 😭
+        </div>
+
+        <div style="{alexa_style}">
+            BECAUSE
+        </div>
+
+        <div style="{alexa_style}">
+            ur over there
+        </div>
+
+        <div style="{alexa_style}">
+            and im over here
+        </div>
+
+        <div style="{alexa_style}">
+            so obviously this is ur fault
+        </div>
+
+        <div style="{point_style}">
+            ♡ +2 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "i know baby :( i miss you too":
+        points += 5
+
+        reply = f"""
+        <div style="{samir_style}">
+            i know baby :( i miss you too
+        </div>
+
+        <div style="{alexa_style}">
+            okayyy 🥺
+        </div>
+
+        <div style="{alexa_style}">
+            i still miss u tho
+        </div>
+
+        <div style="{point_style}">
+            ♡ +5 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "don't be sad, i'll be back with you soon":
+        points += 5
+
+        reply = f"""
+        <div style="{samir_style}">
+            don't be sad, i'll be back with you soon
+        </div>
+
+        <div style="{alexa_style}">
+            not soon enough 🥀
+        </div>
+
+        <div style="{alexa_style}">
+            but okay
+        </div>
+
+        <div style="{point_style}">
+            ♡ +5 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "come here 🫂":
+        points += 4
+
+        reply = f"""
+        <div style="{samir_style}">
+            come here 🫂
+        </div>
+
+        <div style="{alexa_style}">
+            I WOULD IF I COULD 😭
+        </div>
+
+        <div style="{alexa_style}">
+            rude
+        </div>
+
+        <div style="{point_style}">
+            ♡ +4 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "what do you want me to do about it 💀":
+        points -= 10
+
+        reply = f"""
+        <div style="{samir_style}">
+            what do you want me to do about it 💀
+        </div>
+
+        <div style="{alexa_style}">
+            oh!
+        </div>
+
+        <div style="{alexa_style}">
+            okay!
+        </div>
+
+        <div style="{alexa_style}">
+            interesting response!
+        </div>
+
+        <div style="{point_style}">
+            ♡ -10 Boyfriend Points
+        </div>
+        """
+
+    return reply, points
+
+def handle_final_alexa_choice(choice, points, infinity):
+
+    samir_style = """
+        background:#b56fa0;
+        color:white;
+        padding:10px 14px;
+        border-radius:18px 18px 5px 18px;
+        width:fit-content;
+        max-width:75%;
+        margin-left:auto;
+        margin-bottom:12px;
+    """
+
+    alexa_style = """
+        background:#eeeeee;
+        color:#111111;
+        padding:10px 14px;
+        border-radius:18px 18px 18px 5px;
+        width:fit-content;
+        max-width:75%;
+        margin-bottom:12px;
+    """
+
+    point_style = """
+        text-align:center;
+        margin-top:18px;
+        color:#ffbfdc;
+        font-weight:bold;
+    """
+
+    if choice == "call you tonight":
+        points += 5
+
+        reply = f"""
+        <div style="{samir_style}">
+            call you tonight
+        </div>
+
+        <div style="{alexa_style}">
+            good 🥺
+        </div>
+
+        <div style="{point_style}">
+            ♡ +5 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "come back to San Diego as soon as i can":
+        points += 7
+
+        reply = f"""
+        <div style="{samir_style}">
+            come back to San Diego as soon as i can
+        </div>
+
+        <div style="{alexa_style}">
+            GOOD
+        </div>
+
+        <div style="{alexa_style}">
+            hurry up pls 😭
+        </div>
+
+        <div style="{point_style}">
+            ♡ +7 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "give you a million kisses when i see you":
+        points += 7
+
+        reply = f"""
+        <div style="{samir_style}">
+            give you a million kisses when i see you
+        </div>
+
+        <div style="{alexa_style}">
+            okay fineeee 🥺
+        </div>
+
+        <div style="{point_style}">
+            ♡ +7 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "nuff nuff infinity lock":
+        points += 10
+        infinity += 1
+
+        reply = f"""
+        <div style="{samir_style}">
+            nuff nuff infinity lock
+        </div>
+
+        <div style="{alexa_style}">
+            BITCH THATS CHEATING
+        </div>
+
+        <div style="{alexa_style}">
+            but okay 🥺
+        </div>
+
+        <div style="{point_style}">
+            🔒 ♡ +10 Boyfriend Points
+        </div>
+        """
+
+    elif choice == "all of the above":
+        points += 15
+
+        reply = f"""
+        <div style="{samir_style}">
+            all of the above
+        </div>
+
+        <div style="{alexa_style}">
+            ...
+        </div>
+
+        <div style="{alexa_style}">
+            okay fine i love u 🙄
+        </div>
+
+        <div style="{alexa_style}">
+            come home soon pls
+        </div>
+
+        <div style="{point_style}">
+            ♡ +15 Boyfriend Points
+        </div>
+        """
+
+    ending = f"""
+        {reply}
+
+        <div style="{alexa_style}">
+            okay go do what u were doing
+        </div>
+
+        <div style="{alexa_style}">
+            text me later
+        </div>
+
+        <div style="{alexa_style}">
+            and come back to me soon okay?
+        </div>
+
+        <div style="{samir_style}">
+            always ♡
+        </div>
+
+        <div style="{alexa_style}">
+            good
+        </div>
+
+        <div style="{alexa_style}">
+            i'll be waiting :)
+        </div>
+
+        <div style="
+            text-align:center;
+            color:#ffbfdc;
+            margin-top:25px;
+            font-size:18px;
+        ">
+            ♡
+        </div>
+    """
+
+    return ending, points, infinity
+
 def get_alexa_choices(stage):
     if stage == "opening":
         return [
